@@ -1,0 +1,26 @@
+name : CI Pipeline #just a name
+
+on:  # "on" block tells GitHub when to run the workflow
+  push: # events that trigger the workflow
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs: # list of jobs to run in parallel
+  test: # job name
+    runs-on: ubuntu-latest # OS to run the job on
+
+    steps: # list of steps to run
+      -name: Check out the Code # step name
+      uses: actions/checkout@v2 # action to checkout the code (this one is inbuilt in github) this action downloads the code from the repository to the runner/vm
+
+      -name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '22' # Node.js version to use
+
+      -name: Install dependencies
+      run: npm ci # install dependencies # run this command in the terminal
+
+      -name: Run tests
+      run: npm test
