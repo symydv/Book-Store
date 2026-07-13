@@ -17,7 +17,7 @@ jobs: # list of jobs to run in parallel
     - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '22' # Node.js version to use
+        node-version: '24' # Node.js version to use
 
     - name: Install dependencies
       run: npm install # install dependencies # run this command in the terminal
