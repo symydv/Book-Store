@@ -20,7 +20,7 @@ jobs: # list of jobs to run in parallel
         node-version: '22' # Node.js version to use
 
     - name: Install dependencies
-      run: npm ci # install dependencies # run this command in the terminal
+      run: npm install # install dependencies # run this command in the terminal
 
     - name: Run tests
       run: npm test
