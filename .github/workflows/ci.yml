@@ -12,7 +12,7 @@ jobs: # list of jobs to run in parallel
 
     steps: # list of steps to run
     - name: Check out the Code # step name
-      uses: actions/checkout@v2 # action to checkout the code (this one is inbuilt in github) this action downloads the code from the repository to the runner/vm
+      uses: actions/checkout@v4 # action to checkout the code (this one is inbuilt in github) this action downloads the code from the repository to the runner/vm
 
     - name: Set up Node.js
       uses: actions/setup-node@v4
